@@ -25,10 +25,18 @@ function addEmail(email) {
 
 selEmail.addEventListener("change", () => {
 	inEmail.value = selEmail.value;
-	if(lstImg.length > 0) lstImgCollections[emailHeader.innerText] = lstImg;
-	emailHeader.innerText = selEmail.value;
+	
+	if(lstImg.length > 0){
+		 lstImgCollections[emailHeader.innerText] = lstImg;
+	} else {
+		if(lstImgCollections[emailHeader.innerText])
+			delete lstImgCollections[emailHeader.innerText];
+	}
+		
+	emailHeader.innerText = selEmail.value;	
 	dvResponse.innerText = "EMail selected: " + selEmail.value + "\n\n";
 	dvResponse.style.color = "black";
 	dvResponse.style.boxShadow ="inset 0px 0px 3px 2px #222a";
+	
 	loadLists(selEmail.value);	
 });
