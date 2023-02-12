@@ -39,5 +39,5 @@ function getCookies() {
 
 function setCookies(){
 	let now = new Date();
-	document.cookie = "emails = " + lstEmail.toString() + "; expires= " +  now.setDate(now.getDate + 30) + "; path=/JS_Array";
+	document.cookie = "emails = " + lstEmail.toString() + "; expires= " +  now.setDate(now.getDate + 30) + "; path=/JS_Array/";
 }
