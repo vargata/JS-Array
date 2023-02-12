@@ -1,0 +1,38 @@
+#btnHelp{
+	top: 10px;
+	right: 10px;
+	padding: 14px 8px;
+	position: fixed;
+	cursor: pointer;
+	border-radius: 50%;
+	background-color: darken(#fef6e4, 10%);
+	
+	&:hover{
+		background-color: darken(#fef6e4, 14%);
+	}
+	
+	&:hover +#dvHelp{
+		display: block;
+		top: 10vh;
+		left: 10vw;
+		right: 10vw;
+		bottom: 10vh;
+	}
+}
+
+#dvHelp{
+	z-index: 100;
+	display: none;
+	position: fixed;
+	top: 50vh;
+	left: 50vw;
+	right: 50vw;
+	bottom: 50vh;
+	border-radius: 10px;
+	background-color: darken(#fef6e4, 14%);
+	
+	h3{
+		display: block;
+		text-align: center;
+	}
+}

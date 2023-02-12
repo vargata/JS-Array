@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang=en> 
+<head> 
+	<title>JS Array reflection</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link id='pgIcon' rel='icon' href='img/tv.png' type='image/gif'>
+	<link id='pgMainStyle' rel='stylesheet' href='css/master.css'>
+	<script src="https://kit.fontawesome.com/a74776b808.js" crossorigin="anonymous"></script>
+</head> 
+<body>
+	
+	<div id="btnHelp">
+		<i class="fa-regular fa-circle-question fa-2xl"></i>
+	</div>
+	
+	<div id="dvHelp">
+		<h3>Functions:</h3>
+		<ul>
+			<li>Enter EMail address into field, or</li>
+			<li>Select already used EMail</li>
+			<li>Change button to request new picture</li>
+			<li>Add button to assign picture to selected EMail</li>
+			<li>Click on non-current list will make that list the current one</li>
+			<li>Right click on any picture in current list will show custom context menu</li>
+				<ul>
+					<li>to Remove the selected picture</li>
+					<li>to Clear the entire list</li>
+				</ul>
+		</ul>
+	</div>
+	
+	<div id="mnuContext">
+		<div id="mnuRemove">Remove</div>
+		<hr />
+		<div id="mnuClear">Clear</div>
+	</div>
+
+	<div id='dvScreen'>
+
+		<div id='dvMain'>
+			<h1 id='mainH1'>
+				JS Array reflection project - Tamas Varga - NetMatters - 2023
+		    </h1>
+			<div id="flex_container">
+				<div>
+					<div id="dvImgContainer"></div>
+					<input id="btnChange" type="button" value="Change" onclick="showRndImg();" />      
+					<input id="btnAdd" type="button" value="Add" onclick="addImage();" />
+				</div>
+				<div>
+					<div id="selInput">
+						<input id="inEmail" type="text" placeholder="Enter or select EMail..."/>
+						<select id="selEmail">
+							<option value="" selected="selected"></option>
+						</select>
+					</div>
+					<div id="dvResponse"></div>	      
+				</div>
+			</div>
+		</div>
+
+		<div id='dvFoot'>
+			<label class="lblOldPic">Current email: <span id="emailHeader"></span></label>
+			<div id='dvCurrList' class='dvList'>
+			</div>
+			<div id='dvAllList' class='dvList'>
+			</div>
+		</div>
+
+	</div>
+	   
+	<script src="js/addImg.js"></script>
+	<script src="js/loadList.js"></script>
+	<script src="js/imgLoader.js"></script>
+	<script src="js/emailSelector.js"></script>
+	<script src="js/mnuContext.js"></script>
+	<script src="js/master.js"></script>
+	
+</body>
+</html>

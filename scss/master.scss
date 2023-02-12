@@ -1,0 +1,189 @@
+@import 'menu';
+@import 'help';
+
+html{	
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	overflow-y: hidden;
+}
+
+body,
+body > *{	
+	margin: 0px;
+	overflow-x: hidden;
+}
+
+#dvScreen{
+	display: block;
+	box-sizing: border-box;
+	width: 100vw;
+	height: 100vh;
+	min-width: 280px;
+	overflow-y: scroll;
+	box-shadow: inset 0px 0px 20px 5px #f3d2c1;
+	background:	linear-gradient(180deg, darken(#fef6e4, 10%), #fef6e4 75%);
+}
+
+#dvMain{
+	display: block;
+	box-sizing: border-box;
+	width: 90%;
+	margin: auto;
+	text-align: center;
+}
+
+#dvFoot{
+	display: block;
+	box-sizing: border-box;
+	width: 90%;
+	margin: auto;
+}
+
+#dvCurrList{
+	width: 100%;
+	margin: auto;
+	min-height: 120px;
+	padding: 10px 10px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	gap: 10px;
+	box-shadow: inset 0px 0px 10px 5px #f3d2c1;
+	
+	&>*{
+		max-width: 100px;
+	}
+}
+
+#dvAllList{
+	width: 100%;
+	margin-top: 20px;
+	display: flex;
+	box-sizing: border-box;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.dvOldPic{
+	width: 100%;
+	height: 120px;
+	padding: 10px 10px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	column-gap: 10px;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	background-color: #f3d2c1;
+	cursor: pointer;
+	
+	&>*{
+		max-width: 100px;
+	}
+	
+	&:hover{
+		background-color: darken(#f3d2c1, 10%);
+	}
+}
+
+.lblOldPic{
+	width: 100%;
+	padding: 5px 10px;
+	margin-top: 20px;
+	font-size: 16px;
+	font-weight: 600;
+	display: block;
+	box-sizing: border-box;
+	box-shadow: inset 0px 0px 10px 5px #f3d2c1;
+}
+
+#dvImgContainer{
+	width: 200px;
+	height: 200px;
+	margin: auto;
+	box-sizing: border-box;
+	border: 1px solid #000a;
+}
+
+#selInput{
+	position: relative;
+	box-sizing: border-box;
+	margin: auto;
+	width: 220px;
+	height: 30px;
+}
+
+#inEmail,
+#selEmail{
+	left: -2px;
+	outline: none;
+	border: none;
+	position: absolute;
+	box-sizing: border-box;
+	background-color: lightgrey;
+	height: 30px;
+	padding-left: 10px;
+}
+
+#inEmail{
+	z-index: 2;
+	width: calc(280px * .8 - 20px);
+}
+
+#selEmail{
+	z-index: 1;
+	width: calc(280px * .8);
+	box-shadow: 0px 0px 3px 2px #000a;
+	cursor: pointer;
+}
+
+#dvResponse{
+	margin: auto;
+	box-sizing: border-box;
+	border-radius: 5px;
+	width: calc(280px * .8);
+	max-height: 200px;
+	overflow-y: auto;
+	margin: 10px auto;
+	padding: 10px;
+	box-shadow: inset 0px 0px 3px 2px #222a;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+#flex_container{
+	display: flex;
+	box-sizing: border-box;
+	justify-content: center;
+	align-items: stretch;
+	flex-direction: row;
+	flex-wrap: wrap;
+	
+	&>*{
+		margin-top: 20px;
+		width: calc(280px * .8);
+		box-sizing: border-box;
+		min-width: calc(280px * .8);
+	}
+}
+
+#btnAdd,
+#btnChange{
+	margin-top: 10px !important;
+	width: 98px;
+	height: 30px;
+	margin: 0px;
+	box-sizing: border-box;
+	background-color: lightgrey;
+	cursor: pointer;
+	
+	&:hover{
+		background-color: darken(lightgrey, 10%);
+	}
+}
