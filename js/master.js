@@ -30,18 +30,14 @@ document.addEventListener("click", (e) => {
 
 function getCookies() {
 	if(document.cookie){
-		let app = document.cookie.split(";")[0].split("=")[1].split(",");
-		if(app ==="JS-Array"){
-			let emails = document.cookie.split(";")[1].split("=")[1].split(",");
-			emails.forEach(element => addEmail(element));
-			selEmail.selectedIndex = 0;
-			inEmail.value = selEmail.value;
-		}
+		let emails = document.cookie.split(";")[1].split("=")[1].split(",");
+		emails.forEach(element => addEmail(element));
+		selEmail.selectedIndex = 0;
+		inEmail.value = selEmail.value;
 	}
 }
 
 function setCookies(){
 	let now = new Date();
-	document.cookie = "app=JS-Array; expires=" +  new Date(now.setDate(now.getDate() + 30)).toUTCString() + "; path=/";
-	document.cookie = "emails=" + lstEmail.toString() + "; expires=" +  new Date(now.setDate(now.getDate() + 30)).toUTCString() + "; path=/";
+	document.cookie = "emails=" + lstEmail.toString() + "; expires=" +  new Date(now.setDate(now.getDate() + 30)).toUTCString() + "; path=/JS-Array/";
 }
