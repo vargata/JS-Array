@@ -30,7 +30,7 @@ document.addEventListener("click", (e) => {
 
 function getCookies() {
 	if(document.cookie){
-		let emails = document.cookie.split(";")[1].split("=")[1].split(",");
+		let emails = document.cookie.split(";")[0].split("=")[1].split(",");
 		emails.forEach(element => addEmail(element));
 		selEmail.selectedIndex = 0;
 		inEmail.value = selEmail.value;
