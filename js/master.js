@@ -42,6 +42,6 @@ function getCookies() {
 
 function setCookies(){
 	let now = new Date();
-	document.cookie = "app=JS-Array; expires= " +  now.setDate(now.getDate + 30) + "; path=/";
-	document.cookie = "emails=" + lstEmail.toString() + "; expires= " +  now.setDate(now.getDate + 30) + "; path=/";
+	document.cookie = "app=JS-Array; expires=" +  now.setDate(now.getDate() + 30).toUTCString() + "; path=/";
+	document.cookie = "emails=" + lstEmail.toString() + "; expires=" +  now.setDate(now.getDate() + 30).toUTCString() + "; path=/";
 }
